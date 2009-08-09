@@ -1,0 +1,35 @@
+* What's this?
+
+Muscle is a general music SNS client.
+It doesn't depend applications, e.g. xmms, Amarok, Rhythmbox and mpg123,
+using kernel inotify mechanism.
+It also supports multiple services, Last.fm and more.
+
+* Installation
+
+ # ruby setup.rb
+
+* How to use
+
+ $ muscle.rb -c lastfm ~/music/
+
+* System requirments
+
+- Linux OS with inotify enabled kernel
+- Ruby-inotify (http://raa.ruby-lang.org/project/ruby-inotify/)
+- taglib and Ruby-taglib (http://www.hakubi.us/ruby-taglib/)
+
+** inotify enabled kernel
+
+Inotify is enabled in the kernel provided by Fedora Core 5.
+On older Fedora Core series, FC4 and FC3, you can get
+inotify enabled kernel at http://apt.bea.ki.se/kernel-desktop/fedora/linux/.
+But the inotify interface is old, so you can't use original ruby-inotify,
+which supports only newest inotify interface.
+The muscle package includes ruby-inotify supports old inotify interfaces.
+
+* Supported Services
+
+- Last.fm (http://last.fm/)
+- Hatena Music (http://music.hatelabo.jp/)
+- Otolog (http://otolog.jp/) (under development)
